@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Swetrasoft – Good Friend Birthday Reminder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Swetrasoft develops Good Friend, a sophisticated birthday reminder app for professionals and families." />
+  <meta name="description"
+    content="Swetrasoft develops Good Friend, a sophisticated birthday reminder app for professionals and families." />
   <style>
     :root {
-      --primary: #2563eb;      /* Microsoft-ish blue */
+      --primary: #2563eb;
+      /* Microsoft-ish blue */
       --primary-dark: #1d4ed8;
       --accent: #0ea5e9;
       --bg: #f3f4f6;
@@ -194,6 +197,7 @@
     .hero-highlight {
       background: linear-gradient(135deg, var(--primary), var(--accent));
       -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
     }
 
@@ -446,6 +450,63 @@
       color: var(--text-muted);
     }
 
+    /* People */
+
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.8rem;
+    }
+
+    .person-card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: start;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .person-card:hover {
+      box-shadow: var(--shadow-soft);
+      transform: translateY(-2px);
+    }
+
+    .person-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .person-info {
+      flex: 1;
+    }
+
+    .person-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: var(--text);
+    }
+
+    .person-title {
+      font-size: 0.9rem;
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .person-bio {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
     /* Pricing */
 
     .pricing-grid {
@@ -543,6 +604,7 @@
     /* Responsive */
 
     @media (max-width: 960px) {
+
       .hero,
       .company-layout,
       .features-grid,
@@ -570,7 +632,8 @@
 
       .features-grid,
       .pricing-grid,
-      .stats-grid {
+      .stats-grid,
+      .people-grid {
         grid-template-columns: minmax(0, 1fr);
       }
 
@@ -580,6 +643,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="nav">
@@ -591,6 +655,7 @@
         <a href="#good-friend">Good Friend</a>
         <a href="#solutions">Solutions</a>
         <a href="#company">Company</a>
+        <a href="#people">People</a>
         <a href="#pricing">Pricing</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -829,6 +894,51 @@
       </div>
     </section>
 
+    <!-- People -->
+    <section id="people">
+      <div class="section-header">
+        <h2>Meet the team</h2>
+        <p>
+          The people behind Swetrasoft are dedicated to building software that
+          helps you maintain meaningful relationships.
+        </p>
+      </div>
+
+      <div class="people-grid">
+        <article class="person-card">
+          <img
+            src="/Users/wolf/.gemini/antigravity/brain/cbfae0a5-cfd3-4270-99fd-adefc38708b9/sarath_avatar_1764064878449.png"
+            alt="Sarath Chandra Damineni" class="person-avatar" />
+          <div class="person-info">
+            <h3 class="person-name">Sarath Chandra Damineni</h3>
+            <div class="person-title">Co-Founder & Chief Technology Officer</div>
+            <p class="person-bio">
+              Sarath leads the technical vision at Swetrasoft, bringing years of
+              experience in building scalable, privacy-focused applications. He
+              is passionate about creating software that respects user data while
+              delivering exceptional experiences.
+            </p>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img
+            src="/Users/wolf/.gemini/antigravity/brain/cbfae0a5-cfd3-4270-99fd-adefc38708b9/wolfgang_avatar_1764064891663.png"
+            alt="Wolfgang Schneider" class="person-avatar" />
+          <div class="person-info">
+            <h3 class="person-name">Wolfgang Schneider</h3>
+            <div class="person-title">Co-Founder & Chief Executive Officer</div>
+            <p class="person-bio">
+              Wolfgang drives the strategic direction of Swetrasoft, focusing on
+              building products that solve real human problems. With a background
+              in product management and design, he ensures Good Friend remains
+              intuitive and valuable for every user.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- Pricing -->
     <section id="pricing">
       <div class="section-header">
@@ -898,88 +1008,59 @@
       </div>
       <div class="company-layout">
         <div>
-          <form
-            style="
+          <form style="
               background: var(--bg-alt);
               border-radius: var(--radius-lg);
               border: 1px solid var(--border);
               padding: 1.2rem 1.3rem;
               display: grid;
               gap: 0.8rem;
-            "
-          >
+            ">
             <div>
-              <label
-                for="name"
-                style="
+              <label for="name" style="
                   display: block;
                   font-size: 0.8rem;
                   font-weight: 500;
                   margin-bottom: 0.2rem;
-                "
-                >Name</label
-              >
-              <input
-                id="name"
-                type="text"
-                placeholder="Your full name"
-                style="
+                ">Name</label>
+              <input id="name" type="text" placeholder="Your full name" style="
                   width: 100%;
                   padding: 0.55rem 0.6rem;
                   border-radius: 8px;
                   border: 1px solid var(--border);
                   font-size: 0.9rem;
-                "
-              />
+                " />
             </div>
             <div>
-              <label
-                for="email"
-                style="
+              <label for="email" style="
                   display: block;
                   font-size: 0.8rem;
                   font-weight: 500;
                   margin-bottom: 0.2rem;
-                "
-                >Work email</label
-              >
-              <input
-                id="email"
-                type="email"
-                placeholder="you@company.com"
-                style="
+                ">Work email</label>
+              <input id="email" type="email" placeholder="you@company.com" style="
                   width: 100%;
                   padding: 0.55rem 0.6rem;
                   border-radius: 8px;
                   border: 1px solid var(--border);
                   font-size: 0.9rem;
-                "
-              />
+                " />
             </div>
             <div>
-              <label
-                for="message"
-                style="
+              <label for="message" style="
                   display: block;
                   font-size: 0.8rem;
                   font-weight: 500;
                   margin-bottom: 0.2rem;
-                "
-                >How can we help?</label
-              >
-              <textarea
-                id="message"
-                rows="4"
-                placeholder="Tell us briefly about your use case."
-                style="
+                ">How can we help?</label>
+              <textarea id="message" rows="4" placeholder="Tell us briefly about your use case." style="
                   width: 100%;
                   padding: 0.55rem 0.6rem;
                   border-radius: 8px;
                   border: 1px solid var(--border);
                   font-size: 0.9rem;
                   resize: vertical;
-                "
-              ></textarea>
+                "></textarea>
             </div>
             <button type="submit" class="btn btn-primary">
               Submit inquiry
@@ -1029,4 +1110,5 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
