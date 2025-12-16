@@ -249,81 +249,13 @@
       color: var(--text-muted);
     }
 
-    .calendar-mock {
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      padding: 0.85rem;
-      background: linear-gradient(135deg, #eff6ff, #ffffff);
-      margin-bottom: 1rem;
-    }
-
-    .calendar-header {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 0.6rem;
-    }
-
-    .calendar-row {
-      display: grid;
-      grid-template-columns: repeat(7, minmax(0, 1fr));
-      gap: 0.2rem;
-      font-size: 0.7rem;
-      text-align: center;
-      margin-bottom: 0.4rem;
-    }
-
-    .calendar-day-name {
-      font-weight: 500;
-      color: var(--text-muted);
-    }
-
-    .calendar-cell {
-      padding: 0.2rem 0;
-      border-radius: 999px;
-    }
-
-    .calendar-cell.highlight {
-      background: var(--primary);
-      color: #fff;
-      font-weight: 600;
-      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.18);
-    }
-
-    .calendar-cell.reminder {
-      background: rgba(37, 99, 235, 0.08);
-      border: 1px dashed rgba(37, 99, 235, 0.5);
-      font-weight: 500;
-      color: var(--primary);
-    }
-
-    .reminder-list {
-      display: grid;
-      gap: 0.5rem;
-      font-size: 0.8rem;
-    }
-
-    .reminder-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.4rem 0.6rem;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px dashed rgba(148, 163, 184, 0.7);
-    }
-
-    .reminder-name {
-      font-weight: 500;
-    }
-
-    .reminder-label {
-      font-size: 0.7rem;
-      padding: 0.1rem 0.5rem;
-      border-radius: 999px;
-      background: rgba(37, 99, 235, 0.08);
-      color: var(--primary);
+    .app-screenshot {
+      width: 50%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: block;
+      margin: 0 auto;
     }
 
     /* Sections */
@@ -641,72 +573,10 @@
         </div>
       </div>
 
-      <aside class="hero-card" aria-label="Good Friend preview">
-        <div class="hero-card-header">
-          <div>
-            <div class="hero-app-name">Good Friend</div>
-            <div class="hero-subtitle" style="font-size: 0.8rem; margin: 0; color: var(--text-muted);">
-              Smart birthday reminders, synced across your life.
-            </div>
-          </div>
-          <span class="hero-app-badge">Early Access</span>
-        </div>
+      <div>
+        <img src="good-friend-screenshot.png" alt="Good Friend App Screenshot" class="app-screenshot">
+      </div>
 
-        <div class="calendar-mock">
-          <div class="calendar-header">
-            <span>June 2025</span>
-            <span>All birthdays</span>
-          </div>
-          <div class="calendar-row">
-            <span class="calendar-day-name">M</span>
-            <span class="calendar-day-name">T</span>
-            <span class="calendar-day-name">W</span>
-            <span class="calendar-day-name">T</span>
-            <span class="calendar-day-name">F</span>
-            <span class="calendar-day-name">S</span>
-            <span class="calendar-day-name">S</span>
-          </div>
-          <div class="calendar-row">
-            <span class="calendar-cell"></span>
-            <span class="calendar-cell"></span>
-            <span class="calendar-cell">1</span>
-            <span class="calendar-cell reminder">2</span>
-            <span class="calendar-cell">3</span>
-            <span class="calendar-cell">4</span>
-            <span class="calendar-cell">5</span>
-          </div>
-          <div class="calendar-row">
-            <span class="calendar-cell">6</span>
-            <span class="calendar-cell highlight">7</span>
-            <span class="calendar-cell">8</span>
-            <span class="calendar-cell reminder">9</span>
-            <span class="calendar-cell">10</span>
-            <span class="calendar-cell">11</span>
-            <span class="calendar-cell">12</span>
-          </div>
-        </div>
-
-        <div class="reminder-list">
-          <div class="reminder-item">
-            <div>
-              <div class="reminder-name">Alex Johnson</div>
-              <div style="font-size: 0.7rem; color: var(--text-muted);">
-                Turns 40 tomorrow • VIP contact
-              </div>
-            </div>
-            <span class="reminder-label">Prepare message</span>
-          </div>
-          <div class="reminder-item">
-            <div>
-              <div class="reminder-name">Team members</div>
-              <div style="font-size: 0.7rem; color: var(--text-muted);">
-                3 birthdays next week
-              </div>
-            </div>
-            <span class="reminder-label">Plan card</span>
-          </div>
-        </div>
-      </aside>
     </section>
 
     <!-- Company -->
